@@ -15,7 +15,7 @@ body{
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    color:hotpink;
+    color:black;
     font-family: 'Bree Serif', serif;
     font-family: 'Teko', sans-serif;
     background-color: mediumaquamarine;
@@ -29,7 +29,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     background-color:chartreuse;
-    padding: 0 10%;
+    padding: 0 40px;
     background-color:mediumorchid;
     position: sticky;
     top: 0;
@@ -74,7 +74,7 @@ body{
 }
 .modalMenu a{
     text-decoration: none;
-    color: rebeccapurple;
+    color: white;
     font-size: 2rem;
 }
 .modalMenu a:hover{
@@ -94,11 +94,20 @@ body{
     align-items: center;
 }
 .home{
+    flex-direction: column;
+    justify-content: flex-start;
     /* background-image: url(https://picsum.photos/seed/13/900); */
     background-size: cover;
     background-attachment: fixed;
-    background-color:palevioletred;
+    background-color:chartreuse;
     gap: 40px;
+}
+.home_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 100%;
 }
 .homeImage{
     width: 350px;
@@ -124,12 +133,47 @@ body{
 
 }
 .about{
-    background-image: url(https://picsum.photos/seed/25/900);
-    background-size: cover;
-    background-attachment: fixed;
-    flex-direction: column;
-    justify-content: flex-start !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "box1  box2"
+        "box3  box4"  
+        
+        
+        ;
+
 }
+.box{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    
+}
+.about_box1{
+    grid-template: box1;
+    background-image: url(https://picsum.photos/seed/65/600);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 0 0 200px 0;
+}
+.about_box2{
+    grid-template: box2;
+}
+.about_box3{
+    grid-template: box3;
+}
+
+.about_box4{
+    grid-template: box4;
+    background-image: url(https://picsum.photos/seed/85/600);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    border-radius: 200px 0  0;
+}
+
 .showcase{
     background-image: url(https://picsum.photos/seed/30/900);
     background-size: cover;
@@ -160,6 +204,8 @@ body{
     color:fuchsia;
     position: sticky;
     top: 10vh;
+    z-index: 80;
+    margin-bottom: auto;
     
 }
 
