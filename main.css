@@ -109,6 +109,7 @@ body{
     align-items: center;
     gap: 40px;
     height: 100%;
+    margin-bottom: auto;
 }
 .homeImage{
     width: 350px;
