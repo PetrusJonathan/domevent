@@ -88,7 +88,8 @@ body{
 }
 .container section{
     width: 100vw;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,7 +115,7 @@ body{
     height: 350px;
     object-fit: cover;
     object-position: center;
-    border-radius: 200px 200px 20px 200px; 
+    border-radius: 10px 10px 20px 10px; 
     border: 12px solid orange;
     animation-name: bottomToTop;
     animation-duration: 1s;
@@ -171,13 +172,34 @@ body{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    border-radius: 200px 0  0;
+    border-radius: 200px 0 0 0;
 }
 
 .showcase{
-    background-image: url(https://picsum.photos/seed/30/900);
-    background-size: cover;
-    background-attachment: fixed;
+flex-direction: column;
+justify-content: center;
+height: auto;
+
+}
+
+.wrapper_showcase{
+    width: 100vw;
+    height: auto;
+    text-align: center;
+    padding: 30px 20px;
+}
+.showcase_title{
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    color: hotpink;
+}
+.wrapper_showcase img{
+    transition-duration: .5s;
+    transition-delay: .4s;
+}
+.wrapper_showcase img:hover{
+    border-radius: 200px;
 }
 .rotateIcon{
     font-size: 4rem;
