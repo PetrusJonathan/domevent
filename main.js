@@ -14,7 +14,7 @@ const showModal = () => {
 }
 
 //kita buat fungsi untuk hide element
-const hideModal = () => {
+const closeModal = () => {
     //kita ambil element yang akan di SHOW
     let modal = document.querySelector('.modalMenu')
 
